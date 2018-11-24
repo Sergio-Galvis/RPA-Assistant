@@ -79,7 +79,6 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.PDF</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -104,13 +103,13 @@
                 </Assign>
                 <FlowStep.Next>
                   <FlowStep x:Name="__ReferenceID21" sap2010:WorkflowViewState.IdRef="FlowStep_4">
-                    <ui:MonitorEvents ContinueOnError="{x:Null}" DisplayName="Monitor Events Salesforce" sap2010:WorkflowViewState.IdRef="MonitorEvents_1" RepeatForever="False">
+                    <ui:MonitorEvents ContinueOnError="{x:Null}" DisplayName="Busqueda_Salesforce" sap2010:WorkflowViewState.IdRef="MonitorEvents_1" RepeatForever="False">
                       <ui:MonitorEvents.Handler>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="args" />
                           </ActivityAction.Argument>
-                          <Flowchart DisplayName="EventHandler Busqueda_Salesforce" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+                          <Flowchart DisplayName="Busqueda_Salesforce" sap2010:WorkflowViewState.IdRef="Flowchart_3">
                             <Flowchart.StartNode>
                               <FlowStep x:Name="__ReferenceID17" sap2010:WorkflowViewState.IdRef="FlowStep_27">
                                 <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into Status" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="True" Text="BUSCANDO SALESFORCE">
@@ -130,18 +129,18 @@
                                     </ui:GetValue>
                                     <FlowStep.Next>
                                       <FlowStep x:Name="__ReferenceID15" sap2010:WorkflowViewState.IdRef="FlowStep_9">
-                                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Chrome" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="ecdb791d8364bdaa64dd3742629c9f65" Selector="&lt;html app='chrome.exe' title='Salesforce - Enterprise Edition' /&gt;">
+                                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Chrome" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="ecdb791d8364bdaa64dd3742629c9f65" Selector="&lt;html app='chrome.exe' title='*' /&gt;">
                                           <ui:BrowserScope.Body>
                                             <ActivityAction x:TypeArguments="x:Object">
                                               <ActivityAction.Argument>
                                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                               </ActivityAction.Argument>
-                                              <Flowchart DisplayName="Flowchart Busqueda_Salesforce" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                                              <Flowchart DisplayName="Busqueda_Salesforce" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                                                 <Flowchart.StartNode>
                                                   <FlowStep x:Name="__ReferenceID10" sap2010:WorkflowViewState.IdRef="FlowStep_22">
                                                     <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into Buscar" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="True" Text="[aStr_CC]">
                                                       <ui:TypeInto.Target>
-                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3356ed9e1426e935eaa194c67522d23e" Selector="&lt;webctrl id='phSearchInput' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ace350a07bb4fb40c52d259faea0ddee" Selector="&lt;html app='chrome.exe' title='*Salesforce - Enterprise Edition*' /&gt;&lt;webctrl id='phSearchInput' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                                       </ui:TypeInto.Target>
                                                     </ui:TypeInto>
                                                     <FlowStep.Next>
@@ -158,7 +157,7 @@
                                                             </ui:CursorPosition>
                                                           </ui:Click.CursorPosition>
                                                           <ui:Click.Target>
-                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="91f9a7aa9068590b6ce4bb4d1523232d" Selector="&lt;webctrl id='phSearchButton' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="91f9a7aa9068590b6ce4bb4d1523232d" Selector="&lt;html app='chrome.exe' title='*Salesforce - Enterprise Edition*' /&gt;&lt;webctrl id='phSearchButton' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                                           </ui:Click.Target>
                                                         </ui:Click>
                                                         <FlowStep.Next>
@@ -183,7 +182,7 @@
                                                                 <Sequence DisplayName="Sequence Razón Social" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                                                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Razón Social" sap2010:WorkflowViewState.IdRef="GetValue_39">
                                                                     <ui:GetValue.Target>
-                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d8d975270cc8dc36d5c7e83051b2100a" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='acc2_ileinner' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d8d975270cc8dc36d5c7e83051b2100a" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='1' parentid='ep' tag='TABLE' /&gt;&lt;webctrl id='acc2_ilecell' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
                                                                     </ui:GetValue.Target>
                                                                     <ui:GetValue.Value>
                                                                       <OutArgument x:TypeArguments="x:String">[aStr_RazonSocial]</OutArgument>
@@ -202,7 +201,7 @@
                                                                   <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_16">
                                                                     <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Código Solicitante" sap2010:WorkflowViewState.IdRef="GetValue_34">
                                                                       <ui:GetValue.Target>
-                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6c89bbe055aad635e7a984919e63969f" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='1' parentid='ep' tag='TABLE' /&gt;&lt;webctrl id='00N4100000RXt1P_ilecell' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1d221ddbf152f854d6c41835b50e5b43" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='00N4100000RXt1S_ileinner' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                                                                       </ui:GetValue.Target>
                                                                       <ui:GetValue.Value>
                                                                         <OutArgument x:TypeArguments="x:String">[aStr_CodigoSolicitante]</OutArgument>
@@ -212,7 +211,7 @@
                                                                       <FlowStep x:Name="__ReferenceID11" sap2010:WorkflowViewState.IdRef="FlowStep_24">
                                                                         <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Identificación" sap2010:WorkflowViewState.IdRef="GetValue_38">
                                                                           <ui:GetValue.Target>
-                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0c66df1d0bc76ab352bf64284a0e84fe" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='acc5_ileinner' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="862af129c0118986105d663ecaeb1084" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='acc5_ileinner' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                                                                           </ui:GetValue.Target>
                                                                           <ui:GetValue.Value>
                                                                             <OutArgument x:TypeArguments="x:String">[aStr_Identificacion]</OutArgument>
@@ -222,7 +221,7 @@
                                                                           <FlowStep x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="FlowStep_18">
                                                                             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Tipo Cliente" sap2010:WorkflowViewState.IdRef="GetValue_36">
                                                                               <ui:GetValue.Target>
-                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="44e74cdb999bffd6a71e6f59f9facaf2" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='1' parentid='ep' tag='TABLE' /&gt;&lt;webctrl id='RecordType_ilecell' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f98df8cfcfaea6c3c73b688f50322d63" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='RecordType_ileinner' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                                                                               </ui:GetValue.Target>
                                                                               <ui:GetValue.Value>
                                                                                 <OutArgument x:TypeArguments="x:String">[aStr_TipoCliente]</OutArgument>
@@ -232,7 +231,7 @@
                                                                               <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_14">
                                                                                 <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Código Terpel " sap2010:WorkflowViewState.IdRef="GetValue_32">
                                                                                   <ui:GetValue.Target>
-                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f1acf42e663d1b239b0f374523da942a" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='00N4100000RXt1P_ileinner' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bedf1bb73534669be0c39e900965bfe9" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='00N4100000RXt1P_ileinner' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                                                                                   </ui:GetValue.Target>
                                                                                   <ui:GetValue.Value>
                                                                                     <OutArgument x:TypeArguments="x:String">[aStr_CodigoTerpel]</OutArgument>
@@ -252,14 +251,14 @@
                                                                                         </ui:CursorPosition>
                                                                                       </ui:Click.CursorPosition>
                                                                                       <ui:Click.Target>
-                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="285ced72c820bbe2cf38023ac87c3070" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl parentid='acc17_ileinner' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="26010429675738f5adc02f5e1375fb30" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl parentid='acc17_ileinner' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
                                                                                       </ui:Click.Target>
                                                                                     </ui:Click>
                                                                                     <FlowStep.Next>
                                                                                       <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_11">
                                                                                         <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Dirección " sap2010:WorkflowViewState.IdRef="GetValue_29">
                                                                                           <ui:GetValue.Target>
-                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2de5b61f86f89296bf8309467beae5eb" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="402354dfb15707a30612352b7eb977d9" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;" WaitForReady="INTERACTIVE" />
                                                                                           </ui:GetValue.Target>
                                                                                           <ui:GetValue.Value>
                                                                                             <OutArgument x:TypeArguments="x:String">[aStr_Direccion]</OutArgument>
@@ -279,14 +278,14 @@
                                                                                                 </ui:CursorPosition>
                                                                                               </ui:Click.CursorPosition>
                                                                                               <ui:Click.Target>
-                                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="95c1279123f290aa6a08e2ea407499a8" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl aaname='Aceptar' parentid='InlineEditDialog_buttons' tag='INPUT' type='button' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="582fc03395a17f2d9298ddfecf979eac" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl aaname='Aceptar' parentid='InlineEditDialog_buttons' tag='INPUT' type='button' /&gt;" WaitForReady="INTERACTIVE" />
                                                                                               </ui:Click.Target>
                                                                                             </ui:Click>
                                                                                             <FlowStep.Next>
                                                                                               <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_13">
                                                                                                 <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Propietario" sap2010:WorkflowViewState.IdRef="GetValue_31">
                                                                                                   <ui:GetValue.Target>
-                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a4d2c8e4d2d3c18bc62c7a973de42d46" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='lookup005410000056VVFacc1' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a4d2c8e4d2d3c18bc62c7a973de42d46" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='lookup005410000056VVFacc1' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
                                                                                                   </ui:GetValue.Target>
                                                                                                   <ui:GetValue.Value>
                                                                                                     <OutArgument x:TypeArguments="x:String">[aStr_Propietario]</OutArgument>
@@ -296,7 +295,7 @@
                                                                                                   <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_12">
                                                                                                     <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Nombre Ejecutivo" sap2010:WorkflowViewState.IdRef="GetValue_30">
                                                                                                       <ui:GetValue.Target>
-                                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7c1bda45263e8dc7bf84554b0d886669" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='lookup00541000002HLxp00N4100000RXt2Y' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="563a16795fabf84731e5cf6dbe229c66" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='lookup00541000002HLxp00N4100000RXt2Y' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
                                                                                                       </ui:GetValue.Target>
                                                                                                       <ui:GetValue.Value>
                                                                                                         <OutArgument x:TypeArguments="x:String">[aStr_NombreEjecutivo]</OutArgument>
@@ -306,7 +305,7 @@
                                                                                                       <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_17">
                                                                                                         <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Zona" sap2010:WorkflowViewState.IdRef="GetValue_35">
                                                                                                           <ui:GetValue.Target>
-                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4ee4c6d2190369464d34ff0cef8279cc" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='1' parentid='ep' tag='TABLE' /&gt;&lt;webctrl id='00N4100000RXt2p_ilecell' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4969cb7e86d060bb963edf55de27db08" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='00N4100000RXt2p_ileinner' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                                                                                                           </ui:GetValue.Target>
                                                                                                           <ui:GetValue.Value>
                                                                                                             <OutArgument x:TypeArguments="x:String">[aStr_Zona]</OutArgument>
@@ -316,7 +315,7 @@
                                                                                                           <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_15">
                                                                                                             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Estado Cliente" sap2010:WorkflowViewState.IdRef="GetValue_33">
                                                                                                               <ui:GetValue.Target>
-                                                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bb8dc5f45928967e2e21bae075abf7f2" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='1' parentid='ep' tag='TABLE' /&gt;&lt;webctrl id='00N4100000RXt1X_ilecell' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3f8963fe3bcc9c874d20e13a819d9782" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl id='00N4100000RXt1X_ileinner' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                                                                                                               </ui:GetValue.Target>
                                                                                                               <ui:GetValue.Value>
                                                                                                                 <OutArgument x:TypeArguments="x:String">[aStr_EstadoCliente]</OutArgument>
@@ -392,7 +391,7 @@
                                                     </ui:CursorPosition>
                                                   </ui:Click.CursorPosition>
                                                   <ui:Click.Target>
-                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="692f6dda68f8d17e99f164dd24ff84ee" Selector="&lt;html app='chrome.exe' omit:title='Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl parentid='home_Tab' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9be5f4a02edbc8fb25f44de207317956" Selector="&lt;html app='chrome.exe' title='*Cliente empresarial: EDS TERPEL PASEO DE LA 15 ~ Salesforce - En*' /&gt;&lt;webctrl parentid='home_Tab' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
                                                   </ui:Click.Target>
                                                 </ui:Click>
                                               </FlowStep>
@@ -450,7 +449,7 @@
         <WriteLine DisplayName="Write Line" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Se pudo realizar la búsqueda en Salesforce." />
       </TryCatch.Finally>
     </TryCatch>
-    <sads:DebugSymbol.Symbol>d05DOlxVc2Vyc1xTZXJnaW8gR2FsdmlzXERvY3VtZW50c1xVaVBhdGhcQXNpc3RlbnRlX0NFU1xCdXNxdWVkYV9TYWxlc2ZvcmNlLnhhbWxRVQPGAw4CAQFXNFdQAgEDWTRZRAIBAlsFxAMQAgEEXQmrAxQCAQ7CAwnCA5ABAgEMswMNvQMYAgEFXguqAxcCAQ/CA2DCA40BAgENtAMPuwMYAgEIvAMPvAOZAQIBBmERaBoCAV5rFaMDKAIBELkDO7kDQAIBC7YDPLYDSAIBCbwDZrwDlgECAQdmPWZBAgFhYz5jSgIBX2uqAWuxAQIBXaEDGaEDxwMCAVtxG50DJwIBEaEDuwKhA8QDAgFcdCF4LwIBWHslggEzAgFUhQEp9QI7AgEX+AIt/AI7AgEU/wIxjQM8AgESdrQBdpMCAgFadLACdMUCAgFZgAFRgAFaAgFVfbgBfb4CAgFXhQG6AoUBgwMCAVOLAS/yAjsCARj6AsAB+gKfAgIBFvgCvAL4AsMCAgEViwPEAYsD4QICAROOATWSAUMCAU+VATmjAUQCAU2mAT20AUgCAUu3AUHIAUwCAUHLAUXSAVMCAT3VAUncAVcCATnfAU3mAVsCATXpAVHwAV8CATHzAVWBAmACAS+EAlmLAmcCASuOAl2cAmgCASmfAmGmAm8CASWpAmWwAnMCASGzAmm6AncCAR29Am3EAnsCARmQAcgBkAH6AQIBUo4BxAKOAc8CAgFQoQHMAaEB/wECAU6yAdABsgGGAwIBTLgBQ78BUQIBR8ABQ8cBTAIBQtABcdABiQECAT7NAdgBzQG4BAIBQNoBddoBigECATrXAdwB1wH6AgIBPOQBeeQBiwECATbhAeAB4QG7BAIBOO4Bfe4BkAECATLrAeQB6wGNAwIBNP8B6AH/AbYDAgEwiQKFAYkClQECASyGAuwBhgL8AgIBLpoC8AGaAsADAgEqpAKNAaQCnwECASahAvQBoQKcAwIBKK4CkQGuAqcBAgEiqwL4AasCqwMCASS4ApUBuAKgAQIBHrUC/AG1AtwEAgEgwgKZAcICrQECARq/AoACvwLgBAIBHL0Bb70BgQECAUi6AdYBugH0AgIBSsUBbsUBngECAUXCAW/CAYEBAgFD</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d05DOlxVc2Vyc1xTZXJnaW8gR2FsdmlzXERvY3VtZW50c1xVaVBhdGhcQXNpc3RlbnRlX0NFU1xCdXNxdWVkYV9TYWxlc2ZvcmNlLnhhbWxRVAPFAw4CAQFWNFZQAgEDWDRYRAIBAloFwwMQAgEEXAmqAxQCAQ7BAwnBA5ABAgEMsgMNvAMYAgEFXQupAxcCAQ/BA2DBA40BAgENswMPugMYAgEIuwMPuwOZAQIBBmARZxoCAV5qFaIDKAIBELgDO7gDQAIBC7UDPLUDSAIBCbsDZrsDlgECAQdlPWVBAgFhYj5iSgIBX2qkAWqrAQIBXaADGaADxwMCAVtwG5wDJwIBEaADuwKgA8QDAgFccyF3LwIBWHolgQEzAgFUhAEp9AI7AgEX9wIt+wI7AgEU/gIxjAM8AgESdbQBdZMCAgFac7ACc8UCAgFZf1F/WgIBVXy4AXy+AgIBV4QBugKEAeUCAgFTigEv8QI7AgEY+QLAAfkCnwICARb3ArwC9wLDAgIBFYoDxAGKA90CAgETjQE1kQFDAgFPlAE5ogFEAgFNpQE9swFIAgFLtgFBxwFMAgFBygFF0QFTAgE91AFJ2wFXAgE53gFN5QFbAgE16AFR7wFfAgEx8gFVgAJgAgEvgwJZigJnAgErjQJdmwJoAgEpngJhpQJvAgElqAJlrwJzAgEhsgJpuQJ3AgEdvAJtwwJ7AgEZjwHIAY8BwwICAVKNAcQCjQHPAgIBUKABzAGgAcgCAgFOsQHQAbEBhgMCAUy3AUO+AVECAUe/AUPGAUwCAULPAXHPAYkBAgE+zAHYAcwB/QICAUDZAXXZAYoBAgE61gHcAdYB9gICATzjAXnjAYsBAgE24AHgAeABgAMCATjtAX3tAZABAgEy6gHkAeoBiQMCATT+AegB/gGyAwIBMIgChQGIApUBAgEshQLsAYUC+AICAS6ZAvABmQK8AwIBKqMCjQGjAp8BAgEmoAL0AaACmAMCASitApEBrQKnAQIBIqoC+AGqAqcDAgEktwKVAbcCoAECAR60AvwBtAKhAwIBIMECmQHBAq0BAgEavgKAAr4CpQMCARy8AW+8AYEBAgFIuQHWAbkBpwQCAUrEAW7EAZ4BAgFFwQFvwQGBAQIBQw==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -485,9 +484,15 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="Click_10" sap:VirtualizedContainerService.HintSize="200,51" />
       <sap2010:ViewStateData Id="Click_9" sap:VirtualizedContainerService.HintSize="200,51" />
-      <sap2010:ViewStateData Id="GetValue_39" sap:VirtualizedContainerService.HintSize="242,51" />
-      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="242,60" />
-      <sap2010:ViewStateData Id="Sequence_13" sap:VirtualizedContainerService.HintSize="264,275">
+      <sap2010:ViewStateData Id="GetValue_39" sap:VirtualizedContainerService.HintSize="314,106">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Sequence_13" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -693,7 +698,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="BrowserScope_3" sap:VirtualizedContainerService.HintSize="414,197">
+      <sap2010:ViewStateData Id="BrowserScope_3" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -708,7 +713,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Click_13" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="Click_13" sap:VirtualizedContainerService.HintSize="314,106">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -778,7 +783,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="MonitorEvents_1" sap:VirtualizedContainerService.HintSize="414,186">
+      <sap2010:ViewStateData Id="MonitorEvents_1" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

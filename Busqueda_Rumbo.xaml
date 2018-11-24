@@ -36,6 +36,7 @@
     <x:Property Name="aStr_Familias" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="aStr_Estaciones" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="aStr_CapacidadTanque" Type="OutArgument(x:String)" />
+    <x:Property Name="aStr_Cupo" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -106,7 +107,7 @@
         <Sequence DisplayName="Sequence" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Flowchart DisplayName="Busqueda_Rumbo" sap2010:WorkflowViewState.IdRef="Flowchart_1">
             <Flowchart.StartNode>
-              <FlowStep x:Name="__ReferenceID33" sap2010:WorkflowViewState.IdRef="FlowStep_3">
+              <FlowStep x:Name="__ReferenceID37" sap2010:WorkflowViewState.IdRef="FlowStep_3">
                 <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[aBool_OkTI]</OutArgument>
@@ -116,17 +117,17 @@
                   </Assign.Value>
                 </Assign>
                 <FlowStep.Next>
-                  <FlowStep x:Name="__ReferenceID34" sap2010:WorkflowViewState.IdRef="FlowStep_8">
-                    <Flowchart DisplayName="Flowchart Busqueda_Rumbo" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+                  <FlowStep x:Name="__ReferenceID38" sap2010:WorkflowViewState.IdRef="FlowStep_8">
+                    <Flowchart DisplayName="Busqueda_Rumbo" sap2010:WorkflowViewState.IdRef="Flowchart_2">
                       <Flowchart.StartNode>
-                        <FlowStep x:Name="__ReferenceID31" sap2010:WorkflowViewState.IdRef="FlowStep_42">
+                        <FlowStep x:Name="__ReferenceID35" sap2010:WorkflowViewState.IdRef="FlowStep_42">
                           <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into Status" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_15" SendWindowMessages="False" SimulateType="True" Text="BUSCANDO RUMBO">
                             <ui:TypeInto.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7077b68cf0f01426ded6a7b29fe2f67e" Selector="&lt;wnd app='asistente ces.exe' ctrlname='Form1' /&gt;&lt;wnd ctrlname='textBox_Status' /&gt;" WaitForReady="INTERACTIVE" />
                             </ui:TypeInto.Target>
                           </ui:TypeInto>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID26" sap2010:WorkflowViewState.IdRef="FlowStep_9">
+                            <FlowStep x:Name="__ReferenceID30" sap2010:WorkflowViewState.IdRef="FlowStep_9">
                               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text NIT o CC" sap2010:WorkflowViewState.IdRef="GetValue_78">
                                 <ui:GetValue.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="846cd2f56c1b090c0e9fec57cc6b15a7" Selector="&lt;wnd app='asistente ces.exe' ctrlname='Form1' /&gt;&lt;wnd ctrlname='panel_AsistenteCES' /&gt;&lt;wnd ctrlname='textBox_CC' /&gt;" WaitForReady="INTERACTIVE" />
@@ -136,7 +137,7 @@
                                 </ui:GetValue.Value>
                               </ui:GetValue>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID25" sap2010:WorkflowViewState.IdRef="FlowStep_10">
+                                <FlowStep x:Name="__ReferenceID29" sap2010:WorkflowViewState.IdRef="FlowStep_10">
                                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Placa" sap2010:WorkflowViewState.IdRef="GetValue_77">
                                     <ui:GetValue.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="add73cbeaa6fe88ba9de5c0e76e277d3" Selector="&lt;wnd app='asistente ces.exe' ctrlname='Form1' /&gt;&lt;wnd ctrlname='panel_AsistenteCES' /&gt;&lt;wnd ctrlname='textBox_Placa' /&gt;" WaitForReady="INTERACTIVE" />
@@ -146,14 +147,14 @@
                                     </ui:GetValue.Value>
                                   </ui:GetValue>
                                   <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID27" sap2010:WorkflowViewState.IdRef="FlowStep_17">
+                                    <FlowStep x:Name="__ReferenceID31" sap2010:WorkflowViewState.IdRef="FlowStep_17">
                                       <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Rumbo" sap2010:WorkflowViewState.IdRef="BrowserScope_35" InformativeScreenshot="5fc5c3ec01223dc09cce821812712da6" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Home' /&gt;">
                                         <ui:BrowserScope.Body>
                                           <ActivityAction x:TypeArguments="x:Object">
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                             </ActivityAction.Argument>
-                                            <Flowchart DisplayName="Flowchart Rumbo" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+                                            <Flowchart DisplayName="Rumbo" sap2010:WorkflowViewState.IdRef="Flowchart_3">
                                               <Flowchart.StartNode>
                                                 <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_15">
                                                   <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover Cliente" sap2010:WorkflowViewState.IdRef="Hover_16" SendWindowMessages="False" SimulateHover="True">
@@ -249,8 +250,8 @@
                                         </ui:BrowserScope.Body>
                                       </ui:BrowserScope>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID28" sap2010:WorkflowViewState.IdRef="FlowStep_18">
-                                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Buscar Clientes" sap2010:WorkflowViewState.IdRef="BrowserScope_36" InformativeScreenshot="1ce0838071c11932104a7b86b7000028" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;">
+                                        <FlowStep x:Name="__ReferenceID32" sap2010:WorkflowViewState.IdRef="FlowStep_18">
+                                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Buscar Clientes" sap2010:WorkflowViewState.IdRef="BrowserScope_36" InformativeScreenshot="1ce0838071c11932104a7b86b7000028" Selector="&lt;html app='chrome.exe' title='*' /&gt;">
                                             <ui:BrowserScope.Body>
                                               <ActivityAction x:TypeArguments="x:Object">
                                                 <ActivityAction.Argument>
@@ -259,10 +260,10 @@
                                                 <Flowchart DisplayName="Flowchart Buscar Clientes" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                                                   <Flowchart.StartNode>
                                                     <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_21">
-                                                      <Sequence DisplayName="Sequence Datos Generales" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                                                      <Sequence DisplayName="Datos Generales" sap2010:WorkflowViewState.IdRef="Sequence_92">
                                                         <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Regional" sap2010:WorkflowViewState.IdRef="GetValue_95">
                                                           <ui:GetValue.Target>
-                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0fd3b595e614183bab9a6b9e515296fb" Selector="&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl02_ddlRegional' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2c0bf73d50e1c583460021ea9541651f" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl02_ddlRegional' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
                                                           </ui:GetValue.Target>
                                                           <ui:GetValue.Value>
                                                             <OutArgument x:TypeArguments="x:String">[aStr_Regional]</OutArgument>
@@ -270,7 +271,7 @@
                                                         </ui:GetValue>
                                                         <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Código SAP" sap2010:WorkflowViewState.IdRef="GetValue_96">
                                                           <ui:GetValue.Target>
-                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2e5479457c12b702a73159e199d5fae7" Selector="&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl02_txtCodigoSAP' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2e5479457c12b702a73159e199d5fae7" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl02_txtCodigoSAP' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                                           </ui:GetValue.Target>
                                                           <ui:GetValue.Value>
                                                             <OutArgument x:TypeArguments="x:String">[aStr_CodigoSAP]</OutArgument>
@@ -278,7 +279,7 @@
                                                         </ui:GetValue>
                                                         <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Grupo Vendedores" sap2010:WorkflowViewState.IdRef="GetValue_97">
                                                           <ui:GetValue.Target>
-                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1ea2444345b6f8ab286d9b5291fa0281" Selector="&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl02_txtGrupoVendedores' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1ea2444345b6f8ab286d9b5291fa0281" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl02_txtGrupoVendedores' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                                           </ui:GetValue.Target>
                                                           <ui:GetValue.Value>
                                                             <OutArgument x:TypeArguments="x:String">[aStr_GrupoVendedores]</OutArgument>
@@ -286,7 +287,7 @@
                                                         </ui:GetValue>
                                                         <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Activo SAP" sap2010:WorkflowViewState.IdRef="GetValue_98">
                                                           <ui:GetValue.Target>
-                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b6fe31877ead78308232d55989f23c45" Selector="&lt;webctrl id='*' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d501c2f7efdc76e555ee2b6d2f448a0a" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl02_chkActivoSAP' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                                           </ui:GetValue.Target>
                                                           <ui:GetValue.Value>
                                                             <OutArgument x:TypeArguments="x:String">[vStr_AtributoSAP]</OutArgument>
@@ -317,18 +318,18 @@
                                                       </Sequence>
                                                       <FlowStep.Next>
                                                         <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_20">
-                                                          <Sequence DisplayName="Sequence Crédito" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                                                          <Sequence DisplayName="Crédito" sap2010:WorkflowViewState.IdRef="Sequence_93">
                                                             <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Crédito" sap2010:WorkflowViewState.IdRef="Click_59" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                                                               <ui:Click.CursorPosition>
-                                                                <ui:CursorPosition OffsetX="335" OffsetY="25" Position="TopLeft" />
+                                                                <ui:CursorPosition OffsetX="48" OffsetY="25" Position="TopLeft" />
                                                               </ui:Click.CursorPosition>
                                                               <ui:Click.Target>
-                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9119468b5ca8c2e9317c45676a431015" Selector="&lt;webctrl aaname='*CRÉDITO*' parentid='ctl00_ContentPlaceHolder1_Accordion1' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2f7b7dac7aab05b7774bf622db3e5643" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl aaname='*CRÉDITO*' parentid='ctl00_ContentPlaceHolder1_Accordion1' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                                                               </ui:Click.Target>
                                                             </ui:Click>
                                                             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text  Nro Crédito" sap2010:WorkflowViewState.IdRef="GetValue_99">
                                                               <ui:GetValue.Target>
-                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2c741f9ef4bb9722d151a7a97b465dab" Selector="&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl04_txtIdCredito' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="58e38e59e075555e18032eccd6ab2675" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl04_txtIdCredito' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                                               </ui:GetValue.Target>
                                                               <ui:GetValue.Value>
                                                                 <OutArgument x:TypeArguments="x:String">[aStr_NroCredito]</OutArgument>
@@ -336,7 +337,7 @@
                                                             </ui:GetValue>
                                                             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Credito Habilitado" sap2010:WorkflowViewState.IdRef="GetValue_100">
                                                               <ui:GetValue.Target>
-                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="66ba6006081fb20428095e912f790ecd" Selector="&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl04_chkCreditoHabilitado' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="66ba6006081fb20428095e912f790ecd" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl04_chkCreditoHabilitado' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                                               </ui:GetValue.Target>
                                                               <ui:GetValue.Value>
                                                                 <OutArgument x:TypeArguments="x:String">[vStr_AtributoCredito]</OutArgument>
@@ -366,7 +367,7 @@
                                                             </If>
                                                             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Modalidad" sap2010:WorkflowViewState.IdRef="GetValue_101">
                                                               <ui:GetValue.Target>
-                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b5fa5d534f81ad00458b865087a1dae9" Selector="&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl04_TextBoxModalidadCredito' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b5fa5d534f81ad00458b865087a1dae9" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl04_TextBoxModalidadCredito' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                                               </ui:GetValue.Target>
                                                               <ui:GetValue.Value>
                                                                 <OutArgument x:TypeArguments="x:String">[aStr_Modalidad]</OutArgument>
@@ -374,7 +375,7 @@
                                                             </ui:GetValue>
                                                             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Bloqueo Cartera" sap2010:WorkflowViewState.IdRef="GetValue_102">
                                                               <ui:GetValue.Target>
-                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6844d0bdc1bb72ec67255cd0da9fc17a" Selector="&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl04_chkBloqueoCartera' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6844d0bdc1bb72ec67255cd0da9fc17a" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl id='ctl00_ContentPlaceHolder1_ctl04_chkBloqueoCartera' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                                                               </ui:GetValue.Target>
                                                               <ui:GetValue.Value>
                                                                 <OutArgument x:TypeArguments="x:String">[vStr_AtributoBloqueo]</OutArgument>
@@ -405,7 +406,7 @@
                                                           </Sequence>
                                                           <FlowStep.Next>
                                                             <FlowStep x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="FlowStep_19">
-                                                              <Sequence DisplayName="Sequence Contratos" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                                                              <Sequence DisplayName="Contratos" sap2010:WorkflowViewState.IdRef="Sequence_94">
                                                                 <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Contratos" sap2010:WorkflowViewState.IdRef="Click_60" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                                                                   <ui:Click.CursorPosition>
                                                                     <ui:CursorPosition Position="Center">
@@ -418,12 +419,12 @@
                                                                     </ui:CursorPosition>
                                                                   </ui:Click.CursorPosition>
                                                                   <ui:Click.Target>
-                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ddd3d80f5dee9ce06d51aac11b4bffcc" Selector="&lt;webctrl aaname='*LISTA DE CONTRATOS*' parentid='ctl00_ContentPlaceHolder1_Accordion1' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="19dfb1aab51cd5c241f2d5399ee6298c" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl aaname='*LISTA DE CONTRATOS*' parentid='ctl00_ContentPlaceHolder1_Accordion1' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                                                                   </ui:Click.Target>
                                                                 </ui:Click>
                                                                 <ui:UiElementExists DisplayName="Element Exists Contratos" Exists="[vBool_AtributoContratos]" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
                                                                   <ui:UiElementExists.Target>
-                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="eb42953fd3b8813b00997998c2c9de59" Selector="&lt;webctrl parentid='ctl00_ContentPlaceHolder1_ctl16_gvContratos' tag='SPAN' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="eb42953fd3b8813b00997998c2c9de59" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;&lt;webctrl parentid='ctl00_ContentPlaceHolder1_ctl16_gvContratos' tag='SPAN' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
                                                                   </ui:UiElementExists.Target>
                                                                 </ui:UiElementExists>
                                                                 <If Condition="[vBool_AtributoContratos]" sap2010:WorkflowViewState.IdRef="If_33">
@@ -463,14 +464,14 @@
                                             </ui:BrowserScope.Body>
                                           </ui:BrowserScope>
                                           <FlowStep.Next>
-                                            <FlowStep x:Name="__ReferenceID29" sap2010:WorkflowViewState.IdRef="FlowStep_24">
+                                            <FlowStep x:Name="__ReferenceID33" sap2010:WorkflowViewState.IdRef="FlowStep_24">
                                               <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Reporte Vehículo" sap2010:WorkflowViewState.IdRef="BrowserScope_37" InformativeScreenshot="dd17adaa3ddf2ff2be825f7875018a06" Selector="&lt;html app='chrome.exe' title='Rumbo Terpel - Cliente' /&gt;">
                                                 <ui:BrowserScope.Body>
                                                   <ActivityAction x:TypeArguments="x:Object">
                                                     <ActivityAction.Argument>
                                                       <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                                     </ActivityAction.Argument>
-                                                    <Flowchart DisplayName="Flowchart Reporte Vehículo" sap2010:WorkflowViewState.IdRef="Flowchart_5">
+                                                    <Flowchart DisplayName="Reporte Vehículo" sap2010:WorkflowViewState.IdRef="Flowchart_5">
                                                       <Flowchart.StartNode>
                                                         <FlowStep x:Name="__ReferenceID8" sap2010:WorkflowViewState.IdRef="FlowStep_25">
                                                           <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover Administración" sap2010:WorkflowViewState.IdRef="Hover_17" SendWindowMessages="False" SimulateHover="True">
@@ -566,129 +567,136 @@
                                                 </ui:BrowserScope.Body>
                                               </ui:BrowserScope>
                                               <FlowStep.Next>
-                                                <FlowStep x:Name="__ReferenceID30" sap2010:WorkflowViewState.IdRef="FlowStep_30">
+                                                <FlowStep x:Name="__ReferenceID34" sap2010:WorkflowViewState.IdRef="FlowStep_30">
                                                   <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Visualizador Informes" sap2010:WorkflowViewState.IdRef="BrowserScope_38" InformativeScreenshot="3e148dc7202867f87bdf192f6101c143" Selector="&lt;html app='chrome.exe' htmlwindowname='null' title='Visualización Reportes' /&gt;">
                                                     <ui:BrowserScope.Body>
                                                       <ActivityAction x:TypeArguments="x:Object">
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                                         </ActivityAction.Argument>
-                                                        <Flowchart DisplayName="Flowchart Visualizador Informes" sap2010:WorkflowViewState.IdRef="Flowchart_6">
+                                                        <Flowchart DisplayName="Visualizador Informes" sap2010:WorkflowViewState.IdRef="Flowchart_6">
                                                           <Flowchart.StartNode>
-                                                            <FlowStep x:Name="__ReferenceID13" sap2010:WorkflowViewState.IdRef="FlowStep_31">
+                                                            <FlowStep x:Name="__ReferenceID16" sap2010:WorkflowViewState.IdRef="FlowStep_31">
                                                               <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
                                                               <FlowStep.Next>
-                                                                <FlowStep x:Name="__ReferenceID22" sap2010:WorkflowViewState.IdRef="FlowStep_41">
-                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Estado" sap2010:WorkflowViewState.IdRef="GetValue_108">
+                                                                <FlowStep x:Name="__ReferenceID28" sap2010:WorkflowViewState.IdRef="FlowStep_55">
+                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Cupo" sap2010:WorkflowViewState.IdRef="GetValue_113">
                                                                     <ui:GetValue.Target>
-                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="606156297c52daa0352c3575dd833594" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableCol='12' tableRow='24' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="78cd3f4d290e0b99bada40edd00c53d4" Selector="&lt;webctrl aaname='$142,439,572.00' parentid='oReportCell' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                                                                     </ui:GetValue.Target>
                                                                     <ui:GetValue.Value>
-                                                                      <OutArgument x:TypeArguments="x:String">[aStr_Estado]</OutArgument>
+                                                                      <OutArgument x:TypeArguments="x:String">[aStr_Cupo]</OutArgument>
                                                                     </ui:GetValue.Value>
                                                                   </ui:GetValue>
                                                                   <FlowStep.Next>
-                                                                    <FlowStep x:Name="__ReferenceID21" sap2010:WorkflowViewState.IdRef="FlowStep_40">
-                                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Mi Empresa" sap2010:WorkflowViewState.IdRef="GetValue_107">
+                                                                    <FlowStep x:Name="__ReferenceID24" sap2010:WorkflowViewState.IdRef="FlowStep_41">
+                                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Estado" sap2010:WorkflowViewState.IdRef="GetValue_108">
                                                                         <ui:GetValue.Target>
-                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="da8e7b0356ab2dc0601720cbf097ae36" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableCol='17' tableRow='24' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="606156297c52daa0352c3575dd833594" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableCol='12' tableRow='24' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
                                                                         </ui:GetValue.Target>
                                                                         <ui:GetValue.Value>
-                                                                          <OutArgument x:TypeArguments="x:String">[aStr_MiEmpresa]</OutArgument>
+                                                                          <OutArgument x:TypeArguments="x:String">[aStr_Estado]</OutArgument>
                                                                         </ui:GetValue.Value>
                                                                       </ui:GetValue>
                                                                       <FlowStep.Next>
-                                                                        <FlowStep x:Name="__ReferenceID14" sap2010:WorkflowViewState.IdRef="FlowStep_32">
-                                                                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Permitir Consumo" sap2010:WorkflowViewState.IdRef="GetValue_103">
+                                                                        <FlowStep x:Name="__ReferenceID23" sap2010:WorkflowViewState.IdRef="FlowStep_40">
+                                                                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Mi Empresa" sap2010:WorkflowViewState.IdRef="GetValue_107">
                                                                             <ui:GetValue.Target>
-                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fc1b97bc364513a5c6326aa50170bc29" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableCol='4' tableRow='51' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="da8e7b0356ab2dc0601720cbf097ae36" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableCol='17' tableRow='24' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
                                                                             </ui:GetValue.Target>
                                                                             <ui:GetValue.Value>
-                                                                              <OutArgument x:TypeArguments="x:String">[aStr_PermitirConsumo]</OutArgument>
+                                                                              <OutArgument x:TypeArguments="x:String">[aStr_MiEmpresa]</OutArgument>
                                                                             </ui:GetValue.Value>
                                                                           </ui:GetValue>
                                                                           <FlowStep.Next>
-                                                                            <FlowStep x:Name="__ReferenceID15" sap2010:WorkflowViewState.IdRef="FlowStep_33">
-                                                                              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text ROM" sap2010:WorkflowViewState.IdRef="GetValue_104">
+                                                                            <FlowStep x:Name="__ReferenceID17" sap2010:WorkflowViewState.IdRef="FlowStep_32">
+                                                                              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Permitir Consumo" sap2010:WorkflowViewState.IdRef="GetValue_103">
                                                                                 <ui:GetValue.Target>
-                                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2d671e8226cb529b83020c258848c695" Selector="&lt;webctrl aaname='C9000001E3D3DD01' parentid='oReportCell' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fc1b97bc364513a5c6326aa50170bc29" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableCol='4' tableRow='51' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
                                                                                 </ui:GetValue.Target>
                                                                                 <ui:GetValue.Value>
-                                                                                  <OutArgument x:TypeArguments="x:String">[aStr_Rom]</OutArgument>
+                                                                                  <OutArgument x:TypeArguments="x:String">[aStr_PermitirConsumo]</OutArgument>
                                                                                 </ui:GetValue.Value>
                                                                               </ui:GetValue>
                                                                               <FlowStep.Next>
-                                                                                <FlowStep x:Name="__ReferenceID16" sap2010:WorkflowViewState.IdRef="FlowStep_34">
-                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Ceco" sap2010:WorkflowViewState.IdRef="GetValue_105">
-                                                                                    <ui:GetValue.Target>
-                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4773131cd5165f67ca9592ef0451fba0" Selector="&lt;webctrl aaname='NA' parentid='oReportCell' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
-                                                                                    </ui:GetValue.Target>
-                                                                                    <ui:GetValue.Value>
-                                                                                      <OutArgument x:TypeArguments="x:String">[aStr_Ceco]</OutArgument>
-                                                                                    </ui:GetValue.Value>
-                                                                                  </ui:GetValue>
+                                                                                <FlowStep x:Name="__ReferenceID27" sap2010:WorkflowViewState.IdRef="FlowStep_54">
+                                                                                  <Flowchart DisplayName="Get Text Rom" sap2010:WorkflowViewState.IdRef="Flowchart_8">
+                                                                                    <Flowchart.Variables>
+                                                                                      <Variable x:TypeArguments="x:String" Name="variable1" />
+                                                                                    </Flowchart.Variables>
+                                                                                    <Flowchart.StartNode>
+                                                                                      <FlowStep x:Name="__ReferenceID13" sap2010:WorkflowViewState.IdRef="FlowStep_53">
+                                                                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text ROM" sap2010:WorkflowViewState.IdRef="GetValue_111">
+                                                                                          <ui:GetValue.Target>
+                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a689b0db5231f636b3676c8950a98bf8" Selector="&lt;html app='chrome.exe' omit:htmlwindowname='null' title='Visualización Reportes' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableCol='14' tableRow='36' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                          </ui:GetValue.Target>
+                                                                                          <ui:GetValue.Value>
+                                                                                            <OutArgument x:TypeArguments="x:String">[aStr_Rom]</OutArgument>
+                                                                                          </ui:GetValue.Value>
+                                                                                        </ui:GetValue>
+                                                                                        <FlowStep.Next>
+                                                                                          <FlowDecision x:Name="__ReferenceID14" Condition="[aStr_Rom = &quot; &quot;]" DisplayName="Flow Decision" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                                                                            <FlowDecision.True>
+                                                                                              <FlowStep x:Name="__ReferenceID15" sap2010:WorkflowViewState.IdRef="FlowStep_51">
+                                                                                                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text ROM" sap2010:WorkflowViewState.IdRef="GetValue_112">
+                                                                                                  <ui:GetValue.Target>
+                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d2bbed6791056b07f975fd4e247ef6e3" Selector="&lt;html app='chrome.exe' htmlwindowname='null' title='Visualización Reportes' /&gt;&lt;webctrl aaname='7D00000074063F06' parentid='oReportCell' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                                  </ui:GetValue.Target>
+                                                                                                  <ui:GetValue.Value>
+                                                                                                    <OutArgument x:TypeArguments="x:String">[aStr_Rom]</OutArgument>
+                                                                                                  </ui:GetValue.Value>
+                                                                                                </ui:GetValue>
+                                                                                              </FlowStep>
+                                                                                            </FlowDecision.True>
+                                                                                          </FlowDecision>
+                                                                                        </FlowStep.Next>
+                                                                                      </FlowStep>
+                                                                                    </Flowchart.StartNode>
+                                                                                    <x:Reference>__ReferenceID13</x:Reference>
+                                                                                    <x:Reference>__ReferenceID14</x:Reference>
+                                                                                    <x:Reference>__ReferenceID15</x:Reference>
+                                                                                  </Flowchart>
                                                                                   <FlowStep.Next>
-                                                                                    <FlowStep x:Name="__ReferenceID24" sap2010:WorkflowViewState.IdRef="FlowStep_46">
-                                                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Capacidad Tanque" sap2010:WorkflowViewState.IdRef="GetValue_109">
+                                                                                    <FlowStep x:Name="__ReferenceID18" sap2010:WorkflowViewState.IdRef="FlowStep_34">
+                                                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Ceco" sap2010:WorkflowViewState.IdRef="GetValue_105">
                                                                                         <ui:GetValue.Target>
-                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="49b77a610cc70acf651977c8b08ffcc9" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableCol='12' tableRow='68' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4773131cd5165f67ca9592ef0451fba0" Selector="&lt;webctrl aaname='NA' parentid='oReportCell' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                                                                                         </ui:GetValue.Target>
                                                                                         <ui:GetValue.Value>
-                                                                                          <OutArgument x:TypeArguments="x:String">[aStr_CapacidadTanque]</OutArgument>
+                                                                                          <OutArgument x:TypeArguments="x:String">[aStr_Ceco]</OutArgument>
                                                                                         </ui:GetValue.Value>
                                                                                       </ui:GetValue>
                                                                                       <FlowStep.Next>
-                                                                                        <FlowStep x:Name="__ReferenceID17" sap2010:WorkflowViewState.IdRef="FlowStep_35">
-                                                                                          <Sequence DisplayName="Data Scraping Visitas" sap2010:WorkflowViewState.IdRef="Sequence_98">
-                                                                                            <Sequence.Variables>
-                                                                                              <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
-                                                                                            </Sequence.Variables>
-                                                                                            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Visualizador Informes" sap2010:WorkflowViewState.IdRef="BrowserScope_39" InformativeScreenshot="bffc6b7ad09709de8e2409e883307c39" Selector="&lt;html app='chrome.exe' htmlwindowname='null' title='Visualización Reportes' /&gt;">
-                                                                                              <ui:BrowserScope.Body>
-                                                                                                <ActivityAction x:TypeArguments="x:Object">
-                                                                                                  <ActivityAction.Argument>
-                                                                                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                                                                                                  </ActivityAction.Argument>
-                                                                                                  <Sequence DisplayName="Sequence Visitas" sap2010:WorkflowViewState.IdRef="Sequence_99">
-                                                                                                    <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data Visitas" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100">
-                                                                                                      <ui:ExtractData.Target>
-                                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2a55920b9b4cf64a45906f5cf6024390" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableRow='128' tag='TABLE' /&gt;" WaitForReady="COMPLETE" />
-                                                                                                      </ui:ExtractData.Target>
-                                                                                                    </ui:ExtractData>
-                                                                                                    <Assign sap2010:WorkflowViewState.IdRef="Assign_71">
-                                                                                                      <Assign.To>
-                                                                                                        <OutArgument x:TypeArguments="sd:DataTable">[aStr_Visitas]</OutArgument>
-                                                                                                      </Assign.To>
-                                                                                                      <Assign.Value>
-                                                                                                        <InArgument x:TypeArguments="sd:DataTable">[ExtractDataTable]</InArgument>
-                                                                                                      </Assign.Value>
-                                                                                                    </Assign>
-                                                                                                  </Sequence>
-                                                                                                </ActivityAction>
-                                                                                              </ui:BrowserScope.Body>
-                                                                                            </ui:BrowserScope>
-                                                                                          </Sequence>
+                                                                                        <FlowStep x:Name="__ReferenceID26" sap2010:WorkflowViewState.IdRef="FlowStep_46">
+                                                                                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Capacidad Tanque" sap2010:WorkflowViewState.IdRef="GetValue_109">
+                                                                                            <ui:GetValue.Target>
+                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="49b77a610cc70acf651977c8b08ffcc9" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableCol='12' tableRow='68' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                                            </ui:GetValue.Target>
+                                                                                            <ui:GetValue.Value>
+                                                                                              <OutArgument x:TypeArguments="x:String">[aStr_CapacidadTanque]</OutArgument>
+                                                                                            </ui:GetValue.Value>
+                                                                                          </ui:GetValue>
                                                                                           <FlowStep.Next>
-                                                                                            <FlowStep x:Name="__ReferenceID18" sap2010:WorkflowViewState.IdRef="FlowStep_36">
-                                                                                              <Sequence DisplayName="Data Scraping Volumen" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                                                                                            <FlowStep x:Name="__ReferenceID19" sap2010:WorkflowViewState.IdRef="FlowStep_35">
+                                                                                              <Sequence DisplayName="Data Scraping Visitas" sap2010:WorkflowViewState.IdRef="Sequence_98">
                                                                                                 <Sequence.Variables>
                                                                                                   <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                                                                                                 </Sequence.Variables>
-                                                                                                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Visualizador Informes" sap2010:WorkflowViewState.IdRef="BrowserScope_40" InformativeScreenshot="a0d9b17c3b0afeeb59f9c8270e9e0a88" Selector="&lt;html app='chrome.exe' htmlwindowname='null' title='Visualización Reportes' /&gt;">
+                                                                                                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Visualizador Informes" sap2010:WorkflowViewState.IdRef="BrowserScope_39" InformativeScreenshot="bffc6b7ad09709de8e2409e883307c39" Selector="&lt;html app='chrome.exe' htmlwindowname='null' title='Visualización Reportes' /&gt;">
                                                                                                   <ui:BrowserScope.Body>
                                                                                                     <ActivityAction x:TypeArguments="x:Object">
                                                                                                       <ActivityAction.Argument>
                                                                                                         <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                                                                                       </ActivityAction.Argument>
-                                                                                                      <Sequence DisplayName="Sequence Volumen " sap2010:WorkflowViewState.IdRef="Sequence_101">
-                                                                                                        <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data Volumen" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100">
+                                                                                                      <Sequence DisplayName="Sequence Visitas" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                                                                                                        <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data Visitas" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100">
                                                                                                           <ui:ExtractData.Target>
-                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7b0f593b44fc2367b5caa5ef4039a2fe" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableRow='146' tag='TABLE' /&gt;" WaitForReady="COMPLETE" />
+                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2a55920b9b4cf64a45906f5cf6024390" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableRow='128' tag='TABLE' /&gt;" WaitForReady="COMPLETE" />
                                                                                                           </ui:ExtractData.Target>
                                                                                                         </ui:ExtractData>
-                                                                                                        <Assign sap2010:WorkflowViewState.IdRef="Assign_72">
+                                                                                                        <Assign sap2010:WorkflowViewState.IdRef="Assign_71">
                                                                                                           <Assign.To>
-                                                                                                            <OutArgument x:TypeArguments="sd:DataTable">[aStr_Volumen]</OutArgument>
+                                                                                                            <OutArgument x:TypeArguments="sd:DataTable">[aStr_Visitas]</OutArgument>
                                                                                                           </Assign.To>
                                                                                                           <Assign.Value>
                                                                                                             <InArgument x:TypeArguments="sd:DataTable">[ExtractDataTable]</InArgument>
@@ -700,26 +708,26 @@
                                                                                                 </ui:BrowserScope>
                                                                                               </Sequence>
                                                                                               <FlowStep.Next>
-                                                                                                <FlowStep x:Name="__ReferenceID19" sap2010:WorkflowViewState.IdRef="FlowStep_37">
-                                                                                                  <Sequence DisplayName="Data Scraping Familias" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                                                                                                <FlowStep x:Name="__ReferenceID20" sap2010:WorkflowViewState.IdRef="FlowStep_36">
+                                                                                                  <Sequence DisplayName="Data Scraping Volumen" sap2010:WorkflowViewState.IdRef="Sequence_100">
                                                                                                     <Sequence.Variables>
                                                                                                       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                                                                                                     </Sequence.Variables>
-                                                                                                    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Visualizador Informes" sap2010:WorkflowViewState.IdRef="BrowserScope_41" InformativeScreenshot="b790528d5e99abbbf9a97850c79ddabf" Selector="&lt;html app='chrome.exe' htmlwindowname='null' title='Visualización Reportes' /&gt;">
+                                                                                                    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Visualizador Informes" sap2010:WorkflowViewState.IdRef="BrowserScope_40" InformativeScreenshot="a0d9b17c3b0afeeb59f9c8270e9e0a88" Selector="&lt;html app='chrome.exe' htmlwindowname='null' title='Visualización Reportes' /&gt;">
                                                                                                       <ui:BrowserScope.Body>
                                                                                                         <ActivityAction x:TypeArguments="x:Object">
                                                                                                           <ActivityAction.Argument>
                                                                                                             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                                                                                           </ActivityAction.Argument>
-                                                                                                          <Sequence DisplayName="Sequence Familias" sap2010:WorkflowViewState.IdRef="Sequence_102">
-                                                                                                            <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data Familias" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100">
+                                                                                                          <Sequence DisplayName="Sequence Volumen " sap2010:WorkflowViewState.IdRef="Sequence_101">
+                                                                                                            <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data Volumen" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100">
                                                                                                               <ui:ExtractData.Target>
-                                                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="eb28f979a2f28f67183543dac88bf46c" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='1' parentid='oReportCell' tableCol='1' tag='TABLE' /&gt;" WaitForReady="COMPLETE" />
+                                                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7b0f593b44fc2367b5caa5ef4039a2fe" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='oReportCell' tableRow='146' tag='TABLE' /&gt;" WaitForReady="COMPLETE" />
                                                                                                               </ui:ExtractData.Target>
                                                                                                             </ui:ExtractData>
-                                                                                                            <Assign sap2010:WorkflowViewState.IdRef="Assign_73">
+                                                                                                            <Assign sap2010:WorkflowViewState.IdRef="Assign_72">
                                                                                                               <Assign.To>
-                                                                                                                <OutArgument x:TypeArguments="sd:DataTable">[aStr_Familias]</OutArgument>
+                                                                                                                <OutArgument x:TypeArguments="sd:DataTable">[aStr_Volumen]</OutArgument>
                                                                                                               </Assign.To>
                                                                                                               <Assign.Value>
                                                                                                                 <InArgument x:TypeArguments="sd:DataTable">[ExtractDataTable]</InArgument>
@@ -731,26 +739,26 @@
                                                                                                     </ui:BrowserScope>
                                                                                                   </Sequence>
                                                                                                   <FlowStep.Next>
-                                                                                                    <FlowStep x:Name="__ReferenceID20" sap2010:WorkflowViewState.IdRef="FlowStep_38">
-                                                                                                      <Sequence DisplayName="Data Scraping Estaciones" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                                                                                                    <FlowStep x:Name="__ReferenceID21" sap2010:WorkflowViewState.IdRef="FlowStep_37">
+                                                                                                      <Sequence DisplayName="Data Scraping Familias" sap2010:WorkflowViewState.IdRef="Sequence_103">
                                                                                                         <Sequence.Variables>
                                                                                                           <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                                                                                                         </Sequence.Variables>
-                                                                                                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Visualizador Informes" sap2010:WorkflowViewState.IdRef="BrowserScope_42" InformativeScreenshot="58c23d99d1416e5e8d925118d57721f4" Selector="&lt;html app='chrome.exe' htmlwindowname='null' title='Visualización Reportes' /&gt;">
+                                                                                                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Visualizador Informes" sap2010:WorkflowViewState.IdRef="BrowserScope_41" InformativeScreenshot="b790528d5e99abbbf9a97850c79ddabf" Selector="&lt;html app='chrome.exe' htmlwindowname='null' title='Visualización Reportes' /&gt;">
                                                                                                           <ui:BrowserScope.Body>
                                                                                                             <ActivityAction x:TypeArguments="x:Object">
                                                                                                               <ActivityAction.Argument>
                                                                                                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                                                                                               </ActivityAction.Argument>
-                                                                                                              <Sequence DisplayName="Sequence Estaciones" sap2010:WorkflowViewState.IdRef="Sequence_104">
-                                                                                                                <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data Estaciones" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="100">
+                                                                                                              <Sequence DisplayName="Sequence Familias" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                                                                                                                <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data Familias" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100">
                                                                                                                   <ui:ExtractData.Target>
-                                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="62ee30f7b4a134db621035fd7295a4dd" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' parentid='oReportCell' tableCol='1' tag='TABLE' /&gt;" WaitForReady="COMPLETE" />
+                                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="eb28f979a2f28f67183543dac88bf46c" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='1' parentid='oReportCell' tableCol='1' tag='TABLE' /&gt;" WaitForReady="COMPLETE" />
                                                                                                                   </ui:ExtractData.Target>
                                                                                                                 </ui:ExtractData>
-                                                                                                                <Assign sap2010:WorkflowViewState.IdRef="Assign_74">
+                                                                                                                <Assign sap2010:WorkflowViewState.IdRef="Assign_73">
                                                                                                                   <Assign.To>
-                                                                                                                    <OutArgument x:TypeArguments="sd:DataTable">[aStr_Estaciones]</OutArgument>
+                                                                                                                    <OutArgument x:TypeArguments="sd:DataTable">[aStr_Familias]</OutArgument>
                                                                                                                   </Assign.To>
                                                                                                                   <Assign.Value>
                                                                                                                     <InArgument x:TypeArguments="sd:DataTable">[ExtractDataTable]</InArgument>
@@ -762,8 +770,41 @@
                                                                                                         </ui:BrowserScope>
                                                                                                       </Sequence>
                                                                                                       <FlowStep.Next>
-                                                                                                        <FlowStep x:Name="__ReferenceID23" sap2010:WorkflowViewState.IdRef="FlowStep_43">
-                                                                                                          <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window Visualizador Informes" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="01a137c34a8d47e02e64d1828f1f03ac" WaitForReady="INTERACTIVE" />
+                                                                                                        <FlowStep x:Name="__ReferenceID22" sap2010:WorkflowViewState.IdRef="FlowStep_38">
+                                                                                                          <Sequence DisplayName="Data Scraping Estaciones" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                                                                                                            <Sequence.Variables>
+                                                                                                              <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+                                                                                                            </Sequence.Variables>
+                                                                                                            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Visualizador Informes" sap2010:WorkflowViewState.IdRef="BrowserScope_42" InformativeScreenshot="58c23d99d1416e5e8d925118d57721f4" Selector="&lt;html app='chrome.exe' htmlwindowname='null' title='Visualización Reportes' /&gt;">
+                                                                                                              <ui:BrowserScope.Body>
+                                                                                                                <ActivityAction x:TypeArguments="x:Object">
+                                                                                                                  <ActivityAction.Argument>
+                                                                                                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                                                                                  </ActivityAction.Argument>
+                                                                                                                  <Sequence DisplayName="Sequence Estaciones" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                                                                                                                    <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data Estaciones" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="100">
+                                                                                                                      <ui:ExtractData.Target>
+                                                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="62ee30f7b4a134db621035fd7295a4dd" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' parentid='oReportCell' tableCol='1' tag='TABLE' /&gt;" WaitForReady="COMPLETE" />
+                                                                                                                      </ui:ExtractData.Target>
+                                                                                                                    </ui:ExtractData>
+                                                                                                                    <Assign sap2010:WorkflowViewState.IdRef="Assign_74">
+                                                                                                                      <Assign.To>
+                                                                                                                        <OutArgument x:TypeArguments="sd:DataTable">[aStr_Estaciones]</OutArgument>
+                                                                                                                      </Assign.To>
+                                                                                                                      <Assign.Value>
+                                                                                                                        <InArgument x:TypeArguments="sd:DataTable">[ExtractDataTable]</InArgument>
+                                                                                                                      </Assign.Value>
+                                                                                                                    </Assign>
+                                                                                                                  </Sequence>
+                                                                                                                </ActivityAction>
+                                                                                                              </ui:BrowserScope.Body>
+                                                                                                            </ui:BrowserScope>
+                                                                                                          </Sequence>
+                                                                                                          <FlowStep.Next>
+                                                                                                            <FlowStep x:Name="__ReferenceID25" sap2010:WorkflowViewState.IdRef="FlowStep_43">
+                                                                                                              <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window Visualizador Informes" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="01a137c34a8d47e02e64d1828f1f03ac" WaitForReady="INTERACTIVE" />
+                                                                                                            </FlowStep>
+                                                                                                          </FlowStep.Next>
                                                                                                         </FlowStep>
                                                                                                       </FlowStep.Next>
                                                                                                     </FlowStep>
@@ -788,9 +829,6 @@
                                                               </FlowStep.Next>
                                                             </FlowStep>
                                                           </Flowchart.StartNode>
-                                                          <x:Reference>__ReferenceID13</x:Reference>
-                                                          <x:Reference>__ReferenceID14</x:Reference>
-                                                          <x:Reference>__ReferenceID15</x:Reference>
                                                           <x:Reference>__ReferenceID16</x:Reference>
                                                           <x:Reference>__ReferenceID17</x:Reference>
                                                           <x:Reference>__ReferenceID18</x:Reference>
@@ -800,12 +838,16 @@
                                                           <x:Reference>__ReferenceID22</x:Reference>
                                                           <x:Reference>__ReferenceID23</x:Reference>
                                                           <x:Reference>__ReferenceID24</x:Reference>
+                                                          <x:Reference>__ReferenceID25</x:Reference>
+                                                          <x:Reference>__ReferenceID26</x:Reference>
+                                                          <x:Reference>__ReferenceID27</x:Reference>
+                                                          <x:Reference>__ReferenceID28</x:Reference>
                                                         </Flowchart>
                                                       </ActivityAction>
                                                     </ui:BrowserScope.Body>
                                                   </ui:BrowserScope>
                                                   <FlowStep.Next>
-                                                    <FlowStep x:Name="__ReferenceID32" sap2010:WorkflowViewState.IdRef="FlowStep_44">
+                                                    <FlowStep x:Name="__ReferenceID36" sap2010:WorkflowViewState.IdRef="FlowStep_44">
                                                       <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into Status" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_16" SendWindowMessages="False" SimulateType="True" Text="LISTO">
                                                         <ui:TypeInto.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="aa41cf46fce842f5049e59e49c435cbb" Selector="&lt;wnd app='asistente ces.exe' ctrlname='Form1' /&gt;&lt;wnd ctrlname='textBox_Status' /&gt;" WaitForReady="INTERACTIVE" />
@@ -827,21 +869,21 @@
                           </FlowStep.Next>
                         </FlowStep>
                       </Flowchart.StartNode>
-                      <x:Reference>__ReferenceID25</x:Reference>
-                      <x:Reference>__ReferenceID26</x:Reference>
-                      <x:Reference>__ReferenceID27</x:Reference>
-                      <x:Reference>__ReferenceID28</x:Reference>
                       <x:Reference>__ReferenceID29</x:Reference>
                       <x:Reference>__ReferenceID30</x:Reference>
                       <x:Reference>__ReferenceID31</x:Reference>
                       <x:Reference>__ReferenceID32</x:Reference>
+                      <x:Reference>__ReferenceID33</x:Reference>
+                      <x:Reference>__ReferenceID34</x:Reference>
+                      <x:Reference>__ReferenceID35</x:Reference>
+                      <x:Reference>__ReferenceID36</x:Reference>
                     </Flowchart>
                   </FlowStep>
                 </FlowStep.Next>
               </FlowStep>
             </Flowchart.StartNode>
-            <x:Reference>__ReferenceID33</x:Reference>
-            <x:Reference>__ReferenceID34</x:Reference>
+            <x:Reference>__ReferenceID37</x:Reference>
+            <x:Reference>__ReferenceID38</x:Reference>
           </Flowchart>
         </Sequence>
       </TryCatch.Try>
@@ -869,7 +911,7 @@
         <WriteLine DisplayName="Write Line" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Se realizó el proceso exitosamente." />
       </TryCatch.Finally>
     </TryCatch>
-    <sads:DebugSymbol.Symbol>d0lDOlxVc2Vyc1xTZXJnaW8gR2FsdmlzXERvY3VtZW50c1xVaVBhdGhcQXNpc3RlbnRlX0NFU1xCdXNxdWVkYV9SdW1iby54YW1s0wFhA+kGDgIBAWgF5wYQAgECagnOBhQCAQzlBgnlBogBAgEK1gYN4AYYAgEDawvNBhcCAQ3lBmDlBoUBAgEL1wYP3gYYAgEG3wYP3waUAQIBBG4RdRoDAfwBeBXGBiECAQ7cBjvcBkACAQnZBjzZBkgCAQffBmbfBpEBAgEFcz1zQQMB/wFwPnBKAwH9AXsbfykDAfkBggEfiQEtAwH1AYwBI5MBMQMB8QGWASf6ATkDAeMB/QEr0AM9AwGGAdMDL7cEQQIBd7oEM6YGRQIBEqkGN60GRQIBD32uAX2NAgMB+wF7qwJ7uwIDAfoBhwFLhwFUAwH2AYQBsgGEAbgCAwH4AZEBT5EBWwMB8gGOAbYBjgG/AgMB9AGWAbgClgH1AgMB8AGcAS33ATkDAeQB/QHGAv0BhgMDAeIBgwIxzQM9AwGHAdMDywLTA4sDAwGFAdkDNbQEQQIBeLoE1AK6BKoDAgF2wAQ5owZFAgETqwbKAasGqQICARGpBscCqQbOAgIBEJ8BM60BPgMB7gGwATe+AUIDAewBwQE7xQFJAwHpAcgBP9YBSgMB5wHZAUPnAU4DAeUBhgI3vQJCAwHGAcACO5UDRgMBmwGYAz/DA0oDAYgB3AM76gNGAwGDAe0DP/sDSgMBgQH+A0OMBE4CAX+PBEeTBFUCAXuWBEukBFYCAXnDBD/DBLcBAgF1xgRDzQRRAgFx0ARH1wRVAgFt2gRL4QRZAgFp5ARP6wRdAgFl7gRT9QRhAgFh+ARX/wRlAgFdggVbngVmAgFLoQVfvQVqAgE5wAVj3AVuAgEn3wVn+wVyAgEV/gVr/gXwAgIBFKsBxgGrAaUCAwHvAbwBygG8Af4BAwHtAcMBzgHDAdwCAwHrAcEB0wLBAd8CAwHqAdQB0gHUAZ0CAwHoAeUB1gHlAcsCAwHmAYcCOY4CRwMB3gGPAjmWAkcDAdoBlwI5ngJHAwHWAZ8COaYCRwMB0gGnAjm8Aj4DAccBwQI9yAJIAwHCAckCPdACSwMBvgHRAj3YAksDAboB2QI97gJCAwGvAe8CPfYCSwMBqwH3Aj3+AksDAacB/wI9lANCAwGcAZkDQacDTAMBmQGoA0GsA1YDAZQBrQNBwgNGAwGJAegDzgHoA60CAwGEAfkD0gH5A4cCAwGCAYoE1gGKBIsCAwGAAZEE2gGRBPYCAgF+jwTWAo8E5AICAXyiBN4BogT3AgIBessEb8sEfAIBcsgE1gHIBLEEAgF01QRz1QSDAQIBbtIE2gHSBLUEAgFw3wR33wSNAQIBatwE3gHcBLgEAgFs6QR76QSFAQIBZuYE4gHmBLACAgFo8wR/8wSKAQIBYvAE5gHwBKYCAgFk/QSDAf0EmQECAV76BOoB+gTFBAIBYIQFkAGEBa0BAgFMhgVdnQVvAgFNowWUAaMFsQECATqlBWG8BXMCATvCBZgBwgW1AQIBKMQFZdsFdwIBKeEFnAHhBbkBAgEW4wVp+gV7AgEXjAJljAJ0AwHfAYkCzAGJAp0CAwHhAZQCZZQCdQMB2wGRAswBkQKdAgMB3QGcAmWcAnsDAdcBmQLMAZkCowIDAdkBpAJlpAJ3AwHTAaECzAGhAvIBAwHVAacCR6cCcQMByAGpAj2wAkYDAc4BswI9ugJGAwHKAcYC0AHGArACAwHFAcMCasMCbgMBxAHDAlzDAmEDAcMBzgJpzgJ6AwG/AcsC0AHLAqECAwHBAdYCadYCfwMBuwHTAtAB0wKpAgMBvQHZAkvZAnkDAbAB2wJB4gJKAwG2AeUCQewCSgMBsgH0Amn0AnkDAawB8QLQAfECrAIDAa4B/AJp/AJ/AwGoAfkC0AH5AqYCAwGqAf8CS/8CegMBnQGBA0GIA0oDAaMBiwNBkgNKAwGfAaUD1AGlA78CAwGaAaoDvwGqA5QCAwGYAaoDnwKqA6UCAwGXAagDgwGoA54BAwGVAa0DT60DagMBigGvA0W2A04DAZABuQNFwANOAwGMAYYF/gKGBdQDAgFcjAVjmgVuAgFOpQWCA6UF2AMCAUqrBWe5BXICATzEBYYDxAXcAwIBOMoFa9gFdgIBKuMFigPjBeADAgEm6QVv9wV6AgEYrgJorgJqAwHRAasCaasCeQMBzwG4Ami4AmoDAc0BtQJptQJ5AwHLAeACbOACbgMBuQHdAm3dAoUBAwG3AeoCbOoCbgMBtQHnAm3nAoUBAwGzAYYDbIYDbgMBpgGDA22DA4IBAwGkAZADbJADbgMBogGNA22NA4IBAwGgAbQDcLQDggEDAZMBsQNxsQOBAQMBkQG+A3C+A4IBAwGPAbsDcbsDgQEDAY0BjQVlkQV2AgFUkgVlmQVuAgFPrAVpsAV6AgFCsQVpuAVyAgE9ywVtzwV+AgEw0AVt1wV2AgEr6gVx7gWCAQIBHu8FcfYFegIBGY0FpwONBawDAgFbjwX4AY8FrAQCAVqNBdsBjQXgAQIBWY0FoQGNBacBAgFYjQWyAY0FxgECAVaNBZ8CjQXjAgIBVZcFlAGXBaYBAgFSlAWVAZQFowECAVCsBasDrAWwAwIBSa4F/AGuBbAEAgFIrAXfAawF5AECAUesBaUBrAWrAQIBRqwFtgGsBcoBAgFErAWjAqwF5wICAUO2BZgBtgWqAQIBQLMFmQGzBacBAgE+ywWwA8sFtQMCATfNBYACzQWhBQIBNssF4wHLBegBAgE1ywWpAcsFrwECATTLBboBywXOAQIBMssFqALLBewCAgEx1QWcAdUFrgECAS7SBZ0B0gWsAQIBLOoFtgPqBbsDAgEl7AWEAuwFpQUCASTqBecB6gXsAQIBI+oFrQHqBbMBAgEi6gW+AeoF0gECASDqBa4C6gXyAgIBH/QFoAH0BbIBAgEc8QWhAfEFsgECARo=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0lDOlxVc2Vyc1xTZXJnaW8gR2FsdmlzXERvY3VtZW50c1xVaVBhdGhcQXNpc3RlbnRlX0NFU1xCdXNxdWVkYV9SdW1iby54YW1s2wFiA5MHDgIBAWkFkQcQAgECawn4BhQCAQyPBwmPB4gBAgEKgAcNigcYAgEDbAv3BhcCAQ2PB2CPB4UBAgELgQcPiAcYAgEGiQcPiQeUAQIBBG8RdhoDAYcCeRXwBiECAQ6GBzuGB0ACAQmDBzyDB0gCAQeJB2aJB5EBAgEFdD10QQMBigJxPnFKAwGIAnwbgAEpAwGEAoMBH4oBLQMBgAKNASOUATEDAfwBlwEn+wE5AwHuAf4BK9EDPQMBkQHUAy+4BEEDAYIBuwQz0AZFAgES0wY31wZFAgEPfq4Bfo0CAwGGAnyrAny7AgMBhQKIAUuIAVQDAYEChQGyAYUBuAIDAYMCkgFPkgFbAwH9AY8BtgGPAb8CAwH/AZcBuAKXAfUCAwH7AZ0BLfgBOQMB7wH+AcYC/gHxAgMB7QGEAjHOAz0DAZIB1APLAtQDiwMDAZAB2gM1tQRBAwGDAbsE1AK7BKoDAwGBAcEEOc0GRQIBE9UGygHVBqkCAgER0wbHAtMGzgICARCgATOuAT4DAfkBsQE3vwFCAwH3AcIBO8YBSQMB9AHJAT/XAUoDAfIB2gFD6AFOAwHwAYcCN74CQgMB0QHBAjuWA0YDAaYBmQM/xANKAwGTAd0DO+sDRgMBjgHuAz/8A0oDAYwB/wNDjQROAwGKAZAER5QEVQMBhgGXBEulBFYDAYQBxAQ/xAS3AQMBgAHHBEPOBFECAXzRBEfYBFUCAXjbBEviBFkCAXTlBE/sBF0CAXDvBFOSBV8CAWWVBVecBWUCAWGfBVumBWkCAV2pBV/FBWoCAUvIBWPkBW4CATnnBWeDBnICASeGBmuiBnYCARWlBm+lBvQCAgEUrAHGAawBpQIDAfoBvQHKAb0B/gEDAfgBxAHOAcQB3AIDAfYBwgHTAsIB3wIDAfUB1QHSAdUBnQIDAfMB5gHWAeYBywIDAfEBiAI5jwJHAwHpAZACOZcCRwMB5QGYAjmfAkcDAeEBoAI5pwJHAwHdAagCOb0CPgMB0gHCAj3JAkgDAc0BygI90QJLAwHJAdICPdkCSwMBxQHaAj3vAkIDAboB8AI99wJLAwG2AfgCPf8CSwMBsgGAAz2VA0IDAacBmgNBqANMAwGkAakDQa0DVgMBnwGuA0HDA0YDAZQB6QPOAekDrQIDAY8B+gPSAfoDhwIDAY0BiwTWAYsEiwIDAYsBkgTaAZIE9gIDAYkBkATWApAE5AIDAYcBowTeAaME9wIDAYUBzARvzAR6AgF9yQTWAckEowICAX/WBHPWBIABAgF50wTaAdMEtQQCAXvgBHfgBIcBAgF13QTeAd0EuQQCAXfqBHvqBJEBAgFx5wTiAecEvAQCAXP1BFn8BGcCAWz+BIwB/gSoAQIBaoEFYYgFbwIBZpoFgwGaBY4BAgFilwXqAZcFqgICAWSkBYcBpAWdAQIBXqEF7gGhBckEAgFgqwWUAasFsQECAUytBWHEBXMCAU3KBZgBygW1AQIBOswFZeMFdwIBO+kFnAHpBbkBAgEo6wVpggZ7AgEpiAagAYgGvQECARaKBm2hBn8CAReNAmWNAnQDAeoBigLMAYoC2wIDAewBlQJllQJ1AwHmAZICzAGSAtsCAwHoAZ0CZZ0CewMB4gGaAswBmgLhAgMB5AGlAmWlAncDAd4BogLMAaIC2wIDAeABqAJHqAJxAwHTAaoCPbECRgMB2QG0Aj27AkYDAdUBxwLQAccC7gIDAdABxAJpxAJtAwHPAcQCXMQCYAMBzgHPAmnPAnoDAcoBzALQAcwC3wIDAcwB1wJp1wJ/AwHGAdQC0AHUAucCAwHIAdoCS9oCeQMBuwHcAkHjAkoDAcEB5gJB7QJKAwG9AfUCafUCeQMBtwHyAtAB8gLqAgMBuQH9Amn9An8DAbMB+gLQAfoC5AIDAbUBgANLgAN6AwGoAYIDQYkDSgMBrgGMA0GTA0oDAaoBpgPUAaYD/QIDAaUBqwO/AasD0gIDAaMBqwPdAqsD4wIDAaIBqQODAakDngEDAaABrgNPrgNqAwGVAbADRbcDTgMBmwG6A0XBA04DAZcB+gSFAfoEjwECAW33BOwB9wSgBQIBb4YFjQGGBZcBAgFngwX0AYMFlgMCAWmtBYIDrQXYAwIBXLMFZ8EFcgIBTswFhgPMBdwDAgFK0gVr4AV2AgE86wWKA+sF4AMCATjxBW//BXoCASqKBo4DigbkAwIBJpAGc54GfgIBGK8CaK8CagMB3AGsAmmsAnkDAdoBuQJouQJqAwHYAbYCabYCeQMB1gHhAmzhAm4DAcQB3gJt3gKFAQMBwgHrAmzrAm4DAcAB6AJt6AKFAQMBvgGHA2yHA24DAbEBhANthAOCAQMBrwGRA2yRA24DAa0BjgNtjgOCAQMBqwG1A3C1A4IBAwGeAbIDcbIDgQEDAZwBvwNwvwOCAQMBmgG8A3G8A4EBAwGYAbQFabgFegIBVLkFacAFcgIBT9MFbdcFfgIBQtgFbd8FdgIBPfIFcfYFggECATD3BXH+BXoCASuRBnWVBoYBAgEelgZ1nQZ+AgEZtAWrA7QFsAMCAVu2BfwBtgWwBAIBWrQF3wG0BeQBAgFZtAWlAbQFqwECAVi0BbYBtAXKAQIBVrQFowK0BecCAgFVvgWYAb4FqgECAVK7BZkBuwWnAQIBUNMFrwPTBbQDAgFJ1QWAAtUFtAQCAUjTBeMB0wXoAQIBR9MFqQHTBa8BAgFG0wW6AdMFzgECAUTTBacC0wXrAgIBQ90FnAHdBa4BAgFA2gWdAdoFqwECAT7yBbQD8gW5AwIBN/QFhAL0BaUFAgE28gXnAfIF7AECATXyBa0B8gWzAQIBNPIFvgHyBdIBAgEy8gWsAvIF8AICATH8BaAB/AWyAQIBLvkFoQH5BbABAgEskQa6A5EGvwMCASWTBogCkwapBQIBJJEG6wGRBvABAgEjkQaxAZEGtwECASKRBsIBkQbWAQIBIJEGsgKRBvYCAgEfmwakAZsGtgECARyYBqUBmAa2AQIBGg==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -985,7 +1027,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Flowchart_3" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="Flowchart_3" sap:VirtualizedContainerService.HintSize="620,730">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1019,7 +1061,7 @@
       <sap2010:ViewStateData Id="GetValue_98" sap:VirtualizedContainerService.HintSize="200,51" />
       <sap2010:ViewStateData Id="Assign_63" sap:VirtualizedContainerService.HintSize="242,60" />
       <sap2010:ViewStateData Id="Assign_64" sap:VirtualizedContainerService.HintSize="242,60" />
-      <sap2010:ViewStateData Id="If_30" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="If_30" sap:VirtualizedContainerService.HintSize="509,208">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1085,7 +1127,7 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="Assign_67" sap:VirtualizedContainerService.HintSize="242,60" />
       <sap2010:ViewStateData Id="Assign_68" sap:VirtualizedContainerService.HintSize="242,60" />
-      <sap2010:ViewStateData Id="If_32" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="If_32" sap:VirtualizedContainerService.HintSize="509,208">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1093,7 +1135,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_93" sap:VirtualizedContainerService.HintSize="222,721">
+      <sap2010:ViewStateData Id="Sequence_93" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1164,15 +1206,15 @@
       <sap2010:ViewStateData Id="Flowchart_4" sap:VirtualizedContainerService.HintSize="614,636">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
             <av:Size x:Key="ShapeSize">60,75</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="BrowserScope_36" sap:VirtualizedContainerService.HintSize="628,782">
+      <sap2010:ViewStateData Id="BrowserScope_36" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1283,6 +1325,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetValue_113" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="GetValue_108" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1304,10 +1353,55 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="GetValue_104" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="GetValue_111" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetValue_112" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">10.5,326.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowDecision_2" sap:VirtualizedContainerService.HintSize="79,87">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <av:Point x:Key="ShapeLocation">260.5,228.5</av:Point>
+            <av:Size x:Key="ShapeSize">79,87</av:Size>
+            <av:PointCollection x:Key="TrueConnector">260.5,272 110.5,272 110.5,326.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_53">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,127.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,178.5 300,228.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_8" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -1419,7 +1513,7 @@
       <sap2010:ViewStateData Id="FlowStep_43">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,1208.5</av:Point>
+            <av:Point x:Key="ShapeLocation">200,1310.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -1427,40 +1521,49 @@
       <sap2010:ViewStateData Id="FlowStep_38">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,1107.5</av:Point>
+            <av:Point x:Key="ShapeLocation">200,1209.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,1158.5 300,1208.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,1260.5 300,1310.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="FlowStep_37">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,1006.5</av:Point>
+            <av:Point x:Key="ShapeLocation">200,1108.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,1057.5 300,1107.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,1159.5 300,1209.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="FlowStep_36">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,905.5</av:Point>
+            <av:Point x:Key="ShapeLocation">200,1007.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,956.5 300,1006.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,1058.5 300,1108.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="FlowStep_35">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,805.5</av:Point>
+            <av:Point x:Key="ShapeLocation">200,906.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,855.5 300,905.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,957.5 300,1007.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="FlowStep_46">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,805.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,856.5 300,906.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_34">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,704.5</av:Point>
@@ -1469,7 +1572,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="FlowStep_34">
+      <sap2010:ViewStateData Id="FlowStep_54">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,603.5</av:Point>
@@ -1478,7 +1581,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="FlowStep_33">
+      <sap2010:ViewStateData Id="FlowStep_32">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,502.5</av:Point>
@@ -1487,7 +1590,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="FlowStep_32">
+      <sap2010:ViewStateData Id="FlowStep_40">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,401.5</av:Point>
@@ -1496,7 +1599,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="FlowStep_40">
+      <sap2010:ViewStateData Id="FlowStep_41">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,300.5</av:Point>
@@ -1505,7 +1608,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="FlowStep_41">
+      <sap2010:ViewStateData Id="FlowStep_55">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,199.5</av:Point>
@@ -1523,18 +1626,18 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Flowchart_6" sap:VirtualizedContainerService.HintSize="614,1296">
+      <sap2010:ViewStateData Id="Flowchart_6" sap:VirtualizedContainerService.HintSize="614,1398">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
             <av:Size x:Key="ShapeSize">60,75</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
-            <x:Double x:Key="Height">1259.5</x:Double>
+            <x:Double x:Key="Height">1361.5</x:Double>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="BrowserScope_38" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="BrowserScope_38" sap:VirtualizedContainerService.HintSize="414,197">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1619,7 +1722,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Flowchart_2" sap:VirtualizedContainerService.HintSize="614,1022">
+      <sap2010:ViewStateData Id="Flowchart_2" sap:VirtualizedContainerService.HintSize="614,922">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1627,7 +1730,7 @@
             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
             <av:Size x:Key="ShapeSize">60,75</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
-            <x:Double x:Key="Height">986.5</x:Double>
+            <x:Double x:Key="Height">885.5</x:Double>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
